@@ -7,46 +7,56 @@
             Dogs dogs1 = new Dogs();
             Dogs dogs2 = new Dogs("Båtsman", 70, "Det Tjorven och Skrållan bjuder på", "Vit/brun");
             Monkeys monkeys1 = new Monkeys();
-            Monkeys monkeys2 = new Monkeys("Herr Nilsson", 8, 7);
+            Monkeys monkeys2 = new Monkeys("Herr Nilsson", 8, 7, "Husdjur");
             Bears bears1 = new Bears();
-            Bears bears2 = new Bears("Bamse", 48, "Dunderhonung", "Världens starkaste och snällaste björn");
+            Bears bears2 = new Bears("Bamse", 48, "Dunderhonung", "Världens starkaste och snällaste björn", "Pappa björn");
 
-            FinnishSpitz finnish = new FinnishSpitz("Koira", 10, "Gyllene");
+            FinnishSpitz finnish1 = new FinnishSpitz();
+            FinnishSpitz finnish2 = new FinnishSpitz("Koira", 10, "Gyllene", "Skälla på fåglar");
 
-            dogs1.GetInfo();
-            dogs1.MakeSound();
+            SheepDog sheepDog1 = new SheepDog();
+            SheepDog sheepDog2 = new SheepDog("Ozzie", 14, "Vit", 137);
+
+            dogs1.GetInfo();            
             dogs1.WaggingTail();
+            dogs1.MakeSound();
             Console.WriteLine();
 
-            dogs2.GetInfo();
-            dogs2.MakeSound();
+            dogs2.GetInfo();            
             dogs2.WaggingTail();
+            dogs2.MakeSound();
             Console.WriteLine();
 
-            finnish.GetInfo();            
-            finnish.WaggingTail();
-            finnish.UsedFor();
-            finnish.MakeSound();
-            Console.WriteLine();
-
-            monkeys1.GetInfo();
-            monkeys1.MakeSound();
-            monkeys1.HangInTail();
+            finnish1.GetInfo();            
+            finnish1.WaggingTail();
+            finnish1.Hunting();
+            finnish1.MakeSound();
             Console.WriteLine();
             
-            monkeys2.GetInfo();
-            monkeys2.MakeSound();
+            finnish2.GetInfo();            
+            finnish2.WaggingTail();
+            finnish2.Hunting();
+            finnish2.MakeSound();
+            Console.WriteLine();
+
+            monkeys1.GetInfo();            
+            monkeys1.HangInTail();
+            monkeys1.MakeSound();
+            Console.WriteLine();
+            
+            monkeys2.GetInfo();            
             monkeys2.HangInTail();
+            monkeys2.MakeSound();
             Console.WriteLine();
 
-            bears1.GetInfo();
-            bears1.MakeSound();
+            bears1.GetInfo();            
             bears1.Hibernate();
+            bears1.MakeSound();
             Console.WriteLine();
 
-            bears2.GetInfo();
-            bears2.MakeSound();
+            bears2.GetInfo();            
             bears2.Hibernate();
+            bears2.MakeSound();
             Console.WriteLine();
 
             bool addAnimal;
@@ -77,9 +87,14 @@
             string monkeyName = "";
             int monkeyAge = 0;
             int monkeyWeight = 0;
+            string monkeyWild = "";
 
             string bearName = "";
             int bearAge = 0;
+            string bearFood = "";
+            string bearWild = "";
+            string bearGender = "";
+            
 
 
 
@@ -122,8 +137,10 @@
                         monkeyAge = int.Parse(Console.ReadLine());
                         Console.Write("Vikt: ");
                         monkeyWeight = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Är apan vild eller ett husdjur?");
+                        monkeyWild = Console.ReadLine();
                         Console.WriteLine();
-                        Monkeys userMonkey = new Monkeys(monkeyName, monkeyAge, monkeyWeight);
+                        Monkeys userMonkey = new Monkeys(monkeyName, monkeyAge, monkeyWeight, monkeyWild);
                         userMonkey.GetInfo();
                         userMonkey.MakeSound();
                         userMonkey.HangInTail();
@@ -136,8 +153,15 @@
                         bearName = Console.ReadLine();
                         Console.Write("Ålder: ");
                         bearAge = int.Parse(Console.ReadLine());
-                        Console.Write(" ");
-                        // = Console.ReadLine();
+                        Console.WriteLine("Är det en vild eller en tam björn?");
+                        bearWild = Console.ReadLine();
+                        Console.WriteLine("Är det en hona eller hane?");
+                        bearGender = Console.ReadLine();
+                        Console.WriteLine();
+                        Bears userBear = new Bears(bearName, bearAge, bearFood, bearWild, bearGender);
+                        userBear.GetInfo();
+                        userBear.Hibernate();
+                        userBear.MakeSound();
                         break;
                     }
                     else

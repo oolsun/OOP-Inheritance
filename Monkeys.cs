@@ -8,7 +8,7 @@ namespace OOP_Inheritance
 {
     class Monkeys : Animal
     {
-        public int _weight;
+        public int _weight = 42;
         public Monkeys()
         {
             _species = "Apa";
@@ -16,16 +16,16 @@ namespace OOP_Inheritance
             _name = "Santino";
             _age = 45;
             _weight = 50;
-            _petOrWild = "Vilddjur";
+            _petOrWild = "Inlåst på zoo";
         }
-        public Monkeys(string name, int age, int weight)
+        public Monkeys(string name, int age, int weight, string petOrWild)
         {
             _species = "Apa";
             _food = "Bananer";
             _name = name;
             _age = age;
             _weight = weight;
-            _petOrWild = "Vilddjur";
+            _petOrWild = petOrWild;
         }
         public override void MakeSound()
         {

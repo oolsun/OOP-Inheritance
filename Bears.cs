@@ -8,7 +8,7 @@ namespace OOP_Inheritance
 {
     class Bears : Animal
     {
-        public string _TBD;
+        string _gender = "Mamma björn";
         public Bears()
         {
             _species = "Björn";
@@ -17,13 +17,14 @@ namespace OOP_Inheritance
             _age = 129;
             _petOrWild = "Vilddjur";
         }
-        public Bears(string name, int age, string food, string petOrWild)
+        public Bears(string name, int age, string food, string petOrWild, string gender)
         {
             _species = "Björn";
             _food = food;
             _name = name;
             _age = age;
             _petOrWild = petOrWild;
+            _gender = gender;
         }
         public override void MakeSound()
         {
@@ -33,6 +34,7 @@ namespace OOP_Inheritance
         public override void GetInfo()
         {
             base.GetInfo();
+            Console.WriteLine("Hona/hane: " + _gender);
         }
         public void Hibernate()
         {

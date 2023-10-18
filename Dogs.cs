@@ -11,6 +11,7 @@ namespace OOP_Inheritance
     class Dogs : Animal
     {
         public string _color = "Gul/orange";
+        string _breed = "Hundras";
  
         public Dogs()
         {

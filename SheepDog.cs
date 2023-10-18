@@ -1,27 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace OOP_Inheritance
 {
-    class FinnishSpitz : Dogs
+    class SheepDog : Dogs
     {
-        string _breed = "Finnspets";
-        string _likesToDo = "Gräva gropar";
-                
-        public FinnishSpitz()
+        string _breed = "Vallhund";
+        int _sheeps = 100;
+
+        public SheepDog()
         {
             _species = "Hund";
-            _food = "Hundmat (och allt som husse/matte tappar på golvet)";
-            _name = "Haukkuja";
-            _age = 7;
-            _color = "Gul/orange";
+            _food = "Hundmat (och fåren som inte gör som den säger)";
+            _name = "Lassie";
+            _age = 85;
+            _color = "Brun/Vit";
             _petOrWild = "Husdjur";
         }
-        public FinnishSpitz(string name, int age, string color, string likesToDo)
+        public SheepDog(string name, int age, string color, int sheeps)
         {
             _species = "Hund";
             _food = "Hundmat (och allt som husse/matte tappar på golvet)";
@@ -29,7 +28,7 @@ namespace OOP_Inheritance
             _age = age;
             _petOrWild = "Husdjur";
             _color = color;
-            _likesToDo = likesToDo;
+            _sheeps = sheeps;
         }
 
         public override void MakeSound()
@@ -39,15 +38,15 @@ namespace OOP_Inheritance
         public override void GetInfo()
         {
             base.GetInfo();
-            Console.WriteLine("Ras: " + _breed + "\nGillar att: " + _likesToDo);
+            Console.WriteLine("Ras: " + _breed + "\nAntal får " + _name + " vallar: " + _sheeps);
         }
         public override void WaggingTail()
         {
             Console.WriteLine("*" + _name + " viftar på svansen*");
         }
-        public void Hunting()
+        public void Herding()
         {
-            Console.WriteLine(_breed + "en skäller på en tjäder som sitter uppe i trädet");
+            Console.WriteLine(_breed + "en vallar får");
         }
     }
 }

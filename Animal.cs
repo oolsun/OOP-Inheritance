@@ -8,11 +8,11 @@ namespace OOP_Inheritance
 {
     public class Animal
     {
-        public string _species;
-        public string _food;
-        public string _name;
-        public int _age;
-        public string _petOrWild;
+        public string _species = "Typ av djur";
+        public string _food = "Typ av föda";
+        public string _name = "Namn på djuret";
+        public int _age = 0;
+        public string _petOrWild = "Vilddjur eller husdjur";
     
 
         public virtual void MakeSound()
