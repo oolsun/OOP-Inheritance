@@ -106,8 +106,7 @@
                 // If user press any other button, give error message and restart loop. 
                 else
                 {
-                    Console.WriteLine("Du har gjort ett felaktigt val. Tryck enbart y eller n. Trycvk på valfri tangent för att prova igen.");
-                    Console.ReadKey();
+                    Console.WriteLine("\nDu har gjort ett felaktigt val. Vänligen försök igen.");
                 }
             }
             // Clear console for design purpose.
@@ -159,7 +158,7 @@
                         Dogs userDog = new Dogs(dogName, dogAge, dogFood, dogColor);
                         userDog.GetInfo();
                         userDog.WaggingTail();
-                        userDog.Sleeping
+                        userDog.Sleeping();
                         userDog.MakeSound();
                         // Exit loop and exit program.
                         break;
@@ -218,9 +217,9 @@
             // If bool addAnimal is False, exit program.
             else
             {
-                Console.WriteLine("\nDu har valt att inte lägga till något djur. Hej då!");
+                Console.WriteLine("Du har valt att inte lägga till något djur.");
             }
-
+            Console.WriteLine("\nHej då!");
             Console.ReadKey();
         }
 
