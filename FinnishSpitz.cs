@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace OOP_Inheritance
 {
+    // Child class that inherit from class Dogs, which inherit from Animal..
     class FinnishSpitz : Dogs
     {
+        // Properties specific for this class.
         string _breed = "Finnspets";
         string _likesToDo = "Gräva gropar";
-                
+
+        // Default values.
         public FinnishSpitz()
         {
             _species = "Hund";
@@ -21,6 +24,7 @@ namespace OOP_Inheritance
             _color = "Gul/orange";
             _petOrWild = "Husdjur";
         }
+        // Constructor that can change the values.
         public FinnishSpitz(string name, int age, string color, string likesToDo)
         {
             _species = "Hund";
@@ -31,20 +35,28 @@ namespace OOP_Inheritance
             _color = color;
             _likesToDo = likesToDo;
         }
-
+        // Method inherited from parent class Dogs and Animal. Show how the dog sounds.
         public override void MakeSound()
         {
             Console.WriteLine("Hunden skäller: Woof Wooof!");
         }
+        // Method inherited from parent class Dogs and Animal.
+        public override void Sleeping()
+        {
+            Console.WriteLine("Vallhunden sover i hagen med fåren");
+        }
+        // Method inherited from parent class Dogs and Animal, with added info.
         public override void GetInfo()
         {
             base.GetInfo();
             Console.WriteLine("Ras: " + _breed + "\nGillar att: " + _likesToDo);
         }
+        // Method inherited from parent class Dogs.
         public override void WaggingTail()
         {
             Console.WriteLine("*" + _name + " viftar på svansen*");
         }
+        // Method specific for this class.
         public void Hunting()
         {
             Console.WriteLine(_breed + "en skäller på en tjäder som sitter uppe i trädet");

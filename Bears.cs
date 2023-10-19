@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOP_Inheritance
 {
+    // Child class that inherit from parent class Animal.
     class Bears : Animal
     {
-        string _gender = "Mamma björn";
+        // Properties specific for this class.
+        string _gender = "Hane";
+
+        // Default values.
         public Bears()
         {
             _species = "Björn";
@@ -17,6 +21,7 @@ namespace OOP_Inheritance
             _age = 129;
             _petOrWild = "Vilddjur";
         }
+        // Constructor that can change the values.
         public Bears(string name, int age, string food, string petOrWild, string gender)
         {
             _species = "Björn";
@@ -26,16 +31,23 @@ namespace OOP_Inheritance
             _petOrWild = petOrWild;
             _gender = gender;
         }
+        // Method inherited from parent class that shows how the animal sounds.
         public override void MakeSound()
         {
-            Console.WriteLine("Björnen låter: GRRRR!");
+            Console.WriteLine("Björnen låter: GRRRROOWL!");
         }
-
+        // Method inherited from parent class that shows how the animal is sleeping.
+        public override void Sleeping()
+        {
+            Console.WriteLine("Björnen sover i sitt bo");
+        }
+        // Method inherited from parent class. With added info.
         public override void GetInfo()
         {
             base.GetInfo();
             Console.WriteLine("Hona/hane: " + _gender);
         }
+        // Method specific for this class.
         public void Hibernate()
         {
             Console.WriteLine("Björnen går i ide inför vintern");

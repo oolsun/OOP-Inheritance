@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace OOP_Inheritance
 {
+    // Child class that inherit from class Dogs, which inherit from Animal.
     class SheepDog : Dogs
     {
+        // Properties specific for this class.
         string _breed = "Vallhund";
         int _sheeps = 100;
 
+        // Default values.
         public SheepDog()
         {
             _species = "Hund";
@@ -20,6 +23,7 @@ namespace OOP_Inheritance
             _color = "Brun/Vit";
             _petOrWild = "Husdjur";
         }
+        // Constructor that can change the values.
         public SheepDog(string name, int age, string color, int sheeps)
         {
             _species = "Hund";
@@ -30,20 +34,28 @@ namespace OOP_Inheritance
             _color = color;
             _sheeps = sheeps;
         }
-
+        // Method inherited from parent class. Show how the dog sounds.
         public override void MakeSound()
         {
             Console.WriteLine("Hunden skäller: Woof Wooof!");
         }
+        // Method inherited from parent class Dogs and Animal. Same output as Dogs.
+        public override void Sleeping()
+        {
+            base.Sleeping();
+        }
+        // Method inherited from parent class Dogs and Animal, with added info.
         public override void GetInfo()
         {
             base.GetInfo();
             Console.WriteLine("Ras: " + _breed + "\nAntal får " + _name + " vallar: " + _sheeps);
         }
+        // Method inherited from parent class Dogs.
         public override void WaggingTail()
         {
             Console.WriteLine("*" + _name + " viftar på svansen*");
         }
+        // Method specific for this class.
         public void Herding()
         {
             Console.WriteLine(_breed + "en vallar får");
