@@ -2,6 +2,7 @@
 {
     class Program
     {
+        // Olov Olsson Sundqvist .NET23
         static void Main(string[] args)
         {
             // Instances for all the animals. Both with default values and with new values
