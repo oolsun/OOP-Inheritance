@@ -195,6 +195,8 @@
                         bearAge = int.Parse(Console.ReadLine());
                         Console.WriteLine("Är det en vild eller en tam björn?");
                         bearWild = Console.ReadLine();
+                        Console.WriteLine("Vad är björnens favoritmat?");
+                        bearFood = Console.ReadLine();
                         Console.WriteLine("Är det en hona eller hane?");
                         bearGender = Console.ReadLine();
                         Console.WriteLine();

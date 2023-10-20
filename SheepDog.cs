@@ -37,7 +37,7 @@ namespace OOP_Inheritance
         // Method inherited from parent class. Show how the dog sounds.
         public override void MakeSound()
         {
-            Console.WriteLine("Hunden skäller: Woof Wooof!");
+            base.MakeSound();
         }
         // Method inherited from parent class Dogs and Animal. Same output as Dogs.
         public override void Sleeping()
